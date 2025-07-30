@@ -41,8 +41,9 @@
       border-radius: 14px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       padding: 24px 20px 20px 20px;
-      width: 350px;
-      max-width: 100vw;
+      width: 100%;
+      max-width: 320px;
+      flex: 1 1 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -105,9 +106,22 @@
         margin: 10px 0;
         padding: 10px 0;
       }
+      .apps {
+        gap: 18px;
+      }
       .app-card {
-        width: 90vw;
         max-width: 98vw;
+        flex: 1 1 340px;
+      }
+    }
+    @media (max-width: 1000px) {
+      .apps {
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .app-card {
+        max-width: 90vw;
+        flex: 1 1 340px;
       }
     }
     @media (max-width: 800px) {
@@ -119,6 +133,7 @@
       .app-card {
         width: 98vw;
         max-width: 99vw;
+        flex: 1 1 99vw;
       }
       h1 {
         font-size: 1.3rem;
@@ -133,6 +148,7 @@
         font-size: 0.95rem;
         width: 98vw;
         max-width: 99vw;
+        flex: 1 1 99vw;
       }
       .app-title {
         font-size: 1.05rem;
